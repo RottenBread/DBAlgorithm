@@ -8,13 +8,13 @@ map = [['1','1','1','1','1','1'],
        ['1','1','1','1','1','1']]
 MAZE_SIZE = 6
 
+
 def isVaildPos(x, y):
-    if 0 <= x < len(map[0]) and 0 <= y < len(map):
-        if map[y][x] == 1:
-            return False
-        elif map[y][x] == 0 or map[y][x] == 'e':
-            return True
-    return False
+    if x < 0 or y < 0 or x >= MAZE_SIZE or y >= MAZE_SIZE:
+        return False
+    else:
+        return map[y][x] == '0' or map[y][x] == 'x'
+
 
 def DFS():
     stack = Stack()
@@ -25,7 +25,7 @@ def DFS():
         here = stack.pop()
         print(here, end = '=>')
         (x, y) = here
-        if (map[y][x] == 'x'):
+        if map[y][x] == 'x':
             return True
         
         else:
@@ -38,6 +38,7 @@ def DFS():
         print(f' 현재 스택 : {stack.top}')
     
     return False
+
 
 result = DFS()
 if result : print(' --> 미로탐색 성공')
