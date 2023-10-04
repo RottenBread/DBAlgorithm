@@ -2,7 +2,7 @@ from Dequeue import *
 
 dq = CircularDeque()
 for i in range(9):
-    if i%2 == 0:
+    if i % 2 == 0:
         dq.addRear(i)
     else:
         dq.addFront(i)
