@@ -41,6 +41,6 @@ map = [['1', '1', '1', '1', '1', '1'],
 MAZE_SIZE = 6
 result = BFS()
 if result:
-    print('--> 미로탈출 성공')
+    print('--> 미로 탈출 성공')
 else:
-    print('--> 미로탈출 실패')
+    print('--> 미로 탈출 실패')

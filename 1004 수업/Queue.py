@@ -1,4 +1,4 @@
-MAX_QSIZE = 6
+MAX_QSIZE = 10
 
 
 class CircularQueue:
